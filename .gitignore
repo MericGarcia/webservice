@@ -1,0 +1,101 @@
+# Eclipse metadata
+.classpath
+.settings
+.project
+.metadata
+.checkstyle
+.recommenders
+RemoteSystemsTempFiles
+
+*.pydevproject
+bin/
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+**/target/*
+target/*
+*/target/**
+target/**
+
+MLPHippo/content/src/main/resources/content
+MLPHippo/content/src/main/resources/ecm
+cucumber/testsCucumber/src/test/resources/com/sgcib/cucumber
+cucumber/testsNonRegression/src/test/resources/com/sgcib/cucumber
+IwebEcmGenerator/out
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
+# db
+**/test*.db
+**/MLPServices/activemq-data/**
+MLPShell/MLPCore/*.db
+Servers*
+derby.log
+*.log
+
+#test velocity
+velocity.log
+
+MLPShell/MLPGui/src/main/java/com/sgcib/mlp/gui/components/product/list/ProductList_fr_FR.properties.orig
+
+# .NET
+bin/*
+obj/*
+obj/
+*.suo
+*.csproj.user
+
+# Thumbs.db
+Thumbs.db
+.DS_Store
+
+# Maven target directories
+target/
+
+# All Java compilation/package products
+*.class
+*.jar
+*.war
+*.ear
+*.dar
+
+# in-memory DB
+*.db
+db.*
+
+# Misc
+*.tmp
+*.log
+Thumbs.db
+.DS_Store
+
+# git files
+*.orig
+
+
+
+#metric
+.pmd
+.checkstyle
+*.pmd
+
+#generated files
+Tools/aspirator/dependency-reduced-pom.xml
+/target/
+._.DS_Store
+/simpleDb

@@ -1,11 +1,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>tomcat</groupId>
-	<artifactId>tomcat</artifactId>
-	<packaging>war</packaging>
-	<version>1.0</version>
-	<name>tomcat</name>
+	<groupId>fr.keyconsulting.formation</groupId>
+	<artifactId>formation-parent</artifactId>
+	<packaging>pom</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Formation Parent Module</name>
+
+	<modules>
+		<module>java-model </module>
+		<module>java-persistence</module>
+		<module>java-ws-interface</module>
+		<module>java-ws</module>
+	</modules>
+
 	<repositories>
 		<repository>
 			<id>eap</id>
@@ -32,20 +41,20 @@
 	</pluginRepositories>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.6</maven.compiler.source>
-		<maven.compiler.target>1.6</maven.compiler.target>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>org.postgresql</groupId>
+			<groupId>postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>9.2-1003-jdbc4</version>
+			<version>9.2-1002.jdbc4</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.25</version>
-		</dependency>     
+		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -64,18 +73,39 @@
 			<!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
 			<id>openshift</id>
 			<build>
-				<finalName>tomcat</finalName>
+				<finalName>webservice</finalName>
 				<plugins>
 					<plugin>
 						<artifactId>maven-war-plugin</artifactId>
 						<version>2.1.1</version>
 						<configuration>
 							<outputDirectory>webapps</outputDirectory>
-							<warName>ROOT</warName>
+							<warName>webservice</warName>
 						</configuration>
 					</plugin>
 				</plugins>
 			</build>
 		</profile>
 	</profiles>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.0</version>
+					<configuration>
+						<source>1.7</source>
+						<target>1.7</target>
+						<testSource>1.7</testSource>
+						<testTarget>1.7</testTarget>
+					</configuration>
+				</plugin>
+				
+			</plugins>
+		</pluginManagement>
+	</build>
+
+
 </project>

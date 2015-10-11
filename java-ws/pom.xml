@@ -1,0 +1,109 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>fr.keyconsulting.formation</groupId>
+		<artifactId>formation-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>webservice</artifactId>
+	<name>java-ws</name>
+	<packaging>war</packaging>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<webXml>src\main\webapp\WEB-INF\web.xml</webXml>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<testSource>1.7</testSource>
+					<testTarget>1.7</testTarget>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.cargo</groupId>
+				<artifactId>cargo-maven2-plugin</artifactId>
+				<version>1.4.15</version>
+				<configuration>
+
+					<!-- Container configuration -->
+					<container>
+						<containerId>tomcat6x</containerId>
+						<zipUrlInstaller>
+							<url>http://archive.apache.org/dist/tomcat/tomcat-6/v6.0.32/bin/apache-tomcat-6.0.32.zip</url>
+						</zipUrlInstaller>
+						<!-- Instead of downloading the container, you can also reuse an existing 
+							installation by settings its directory: <home>c:/apps/tomcat-6.0.32</home> -->
+						<output>${project.build.directory}/tomcat6x/container.log</output>
+						<append>false</append>
+						<log>${project.build.directory}/cargo.log</log>
+					</container>
+
+					<!-- Configuration to use with the container or the deployer -->
+					<configuration>
+						<type>standalone</type>
+						<home>${project.build.directory}/tomcat6x</home>
+						<properties>
+							<cargo.servlet.port>9090</cargo.servlet.port>
+							<cargo.tomcat.ajp.port>9009</cargo.tomcat.ajp.port>
+							<cargo.logging>high</cargo.logging>
+							<cargo.jvmargs>-Xdebug -Xnoagent
+								-Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n
+								-Xms512m -Xmx1024m -XX:MaxPermSize=256m -XX:+UseParNewGC
+								-XX:+UseConcMarkSweepGC</cargo.jvmargs>
+						</properties>
+					</configuration>
+					<deployables>
+						<deployable>
+							<groupId>fr.keyconsulting.formation</groupId>
+							<artifactId>webservice</artifactId>
+							<type>war</type>
+						</deployable>
+					</deployables>
+				</configuration>
+
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>fr.keyconsulting.formation</groupId>
+			<artifactId>model</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+				<dependency>
+			<groupId>fr.keyconsulting.formation</groupId>
+			<artifactId>persistence</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>fr.keyconsulting.formation</groupId>
+			<artifactId>webservice-interface</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxws</artifactId>
+			<version>3.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http</artifactId>
+			<version>3.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>4.2.0.RELEASE</version>
+		</dependency>
+	</dependencies>
+</project>

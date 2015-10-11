@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>fr.keyconsulting.formation</groupId>
+		<artifactId>formation-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>model</artifactId>
+	<name>java-model</name>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<testSource>1.7</testSource>
+					<testTarget>1.7</testTarget>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+			<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.3.11.Final</version>
+		</dependency>
+		<dependency>
+		<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>1.6.2.redhat-5</version>
+		</dependency>
+	</dependencies>
+</project>
