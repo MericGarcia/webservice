@@ -14,7 +14,7 @@
 	</modules>
 
 	<scm>
-    		<developerConnection>scm:git:file:///Users/mericgarcia/Workspace/Repositories/deployment/webservice</developerConnection>
+    		<developerConnection>scm:git:https://github.com/MericGarcia/webservice</developerConnection>
   	  <tag>HEAD</tag>
   </scm>
 
