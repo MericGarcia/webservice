@@ -19,6 +19,12 @@ public class ORMPersistenceService implements PersistenceService{
 	private EntityManager em;
 
 	public ORMPersistenceService() {
+		try {
+			Class.forName("org.postgresql.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		this.factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
 		this.em = factory.createEntityManager();
 	}
