@@ -5,14 +5,12 @@
 	<packaging>pom</packaging>
 	<version>1.0.3-SNAPSHOT</version>
 	<name>Formation Parent Module</name>
-
 	<modules>
 		<module>java-model </module>
 		<module>java-persistence</module>
 		<module>java-ws-interface</module>
 		<module>java-ws</module>
 	</modules>
-
 	<scm>
     		<developerConnection>scm:git:https://github.com/MericGarcia/webservice</developerConnection>
   	  <tag>HEAD</tag>
