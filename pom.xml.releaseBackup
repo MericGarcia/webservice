@@ -3,7 +3,7 @@
 	<groupId>fr.keyconsulting.formation</groupId>
 	<artifactId>formation-parent</artifactId>
 	<packaging>pom</packaging>
-	<version>1.2-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>Formation Parent Module</name>
 
 	<modules>
@@ -45,7 +45,7 @@
 <distributionManagement>
    <repository>
       <id>nexus-releases</id>
-      <url>http://localhost:8081/repository/maven-releases/</url>
+      <url>http://localhost:8081/nexus/content/repositories/releases</url>
    </repository>
 </distributionManagement>
 
