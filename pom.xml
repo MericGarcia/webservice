@@ -3,7 +3,7 @@
 	<groupId>fr.keyconsulting.formation</groupId>
 	<artifactId>formation-parent</artifactId>
 	<packaging>pom</packaging>
-	<version>1.2-SNAPSHOT</version>
+	<version>1.2</version>
 	<name>Formation Parent Module</name>
 
 	<modules>
@@ -15,7 +15,7 @@
 
 	<scm>
     		<developerConnection>scm:git:https://github.com/MericGarcia/webservice</developerConnection>
-  	  <tag>HEAD</tag>
+  	  <tag>formation-parent-1.2</tag>
   </scm>
 
 	<repositories>
