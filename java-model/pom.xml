@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>fr.keyconsulting.formation</groupId>
 		<artifactId>formation-parent</artifactId>
-		<version>1.1</version>
+		<version>1.2-SNAPSHOT</version>
 	</parent>
 	<artifactId>model</artifactId>
 	<name>java-model</name>
