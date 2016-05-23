@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>fr.keyconsulting.formation</groupId>
 		<artifactId>formation-parent</artifactId>
-		<version>1.0.1-SNAPSHOT</version>
+		<version>1.0.1</version>
 	</parent>
 	<artifactId>webservice</artifactId>
 	<name>java-ws</name>
@@ -77,17 +77,17 @@
 		<dependency>
 			<groupId>fr.keyconsulting.formation</groupId>
 			<artifactId>model</artifactId>
-			<version>1.0.1-SNAPSHOT</version>
+			<version>1.0.1</version>
 		</dependency>
 				<dependency>
 			<groupId>fr.keyconsulting.formation</groupId>
 			<artifactId>persistence</artifactId>
-			<version>1.0.1-SNAPSHOT</version>
+			<version>1.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>fr.keyconsulting.formation</groupId>
 			<artifactId>webservice-interface</artifactId>
-			<version>1.0.1-SNAPSHOT</version>
+			<version>1.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.cxf</groupId>
