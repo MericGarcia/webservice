@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>fr.keyconsulting.formation</groupId>
 		<artifactId>formation-parent</artifactId>
-		<version>1.12</version>
+		<version>1.13-SNAPSHOT</version>
 	</parent>
 	<artifactId>webservice-interface</artifactId>
 	<name>java-ws-interface</name>
@@ -26,7 +26,7 @@
 		<dependency>
 			<groupId>fr.keyconsulting.formation</groupId>
 			<artifactId>model</artifactId>
-			<version>1.12</version>
+			<version>1.13-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>
