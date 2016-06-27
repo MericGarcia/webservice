@@ -9,7 +9,7 @@ public class HelloServiceTest {
 	
 	@Test
 	public void sayHello(){
-		Assert.assertEquals("ello Toto!",service.sayHi("Toto"));
+		Assert.assertEquals("Hello Toto!",service.sayHi("Toto"));
 	}
 	
 }
